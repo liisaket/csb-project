@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>welcome</h1>
+    <h2>leave a note</h2>
+    <form action="/welcome" method="POST">
+      <input type="text" name="note">
+      <button type="submit">send</button>
+    </form>
+    <h2>notes</h2>
+    {% for note in all_notes %}
+      <ul>
+        <li>{{ note[0] }}</li>
+      </ul>
+    {% endfor %}
+    <form action="/logout">
+      <input type="submit" value="log out">
+    </form>
+  </body>
+</html>
