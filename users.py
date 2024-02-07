@@ -64,7 +64,7 @@ def check_passwords(password1, password2):
         return False
     return True
 
-# For flaw 3 fix
+# For flaw 5 fix
 def user_id():
     return session.get("user_id")
 
