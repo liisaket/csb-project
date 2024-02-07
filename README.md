@@ -43,7 +43,10 @@ If you do not have poetry installed, please install it via https://python-poetry
 - Install the project dependencies:
 > poetry install --no-root
 
-- Open your PostgreSQL connection and define database tables in terminal:
+- Open your PostgreSQL connection and if needed, create a new database:
+> createdb your_database
+
+- Define database tables in terminal:
 > psql your_database < schema.sql
 
 - Run the application:
