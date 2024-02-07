@@ -13,11 +13,12 @@ def error():
 
 @app.route("/welcome", methods=["GET", "POST"])
 def welcome():
-    # Flaw 4: Broken access control: attacker can act as a user without being logged in.
-    # Fix by checking if user is logged in (user_id is in session).
+    # Flaw 5: Broken access control: attacker can act as a user without being logged in.
+    # Fix flaw 5 by checking if a user is logged in.
     
     # if users.user_id():
-
+      # For flaw 3 / flaw 5 fix also:
+      # users.check_csrf()
       if request.method == "GET":
         all_notes = notes.get_notes()
         return render_template("welcome.html", all_notes=all_notes)

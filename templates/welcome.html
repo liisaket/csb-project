@@ -5,6 +5,9 @@
     <h2>leave a note</h2>
     <form action="/welcome" method="POST">
       <input type="text" name="note">
+      <!-- Flaw 3 fix 
+        <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+      -->
       <button type="submit">send</button>
     </form>
     <h2>notes</h2>

@@ -4,6 +4,9 @@
     <a href="/">home</a>
     <form action="/login" method="POST">
       <h3>login</h3>
+      {% if message %}
+        <p>{{ message }}</p>
+      {% endif %}
       <div>
           <input type="text" name="username" placeholder="username">
       </div>
