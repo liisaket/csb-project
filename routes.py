@@ -17,12 +17,12 @@ def welcome():
     # Fix flaw 5 by checking if a user is logged in.
     
     # if users.user_id():
-      # For flaw 3 / flaw 5 fix also:
-      # users.check_csrf()
       if request.method == "GET":
         all_notes = notes.get_notes()
         return render_template("welcome.html", all_notes=all_notes)
       if request.method == "POST":
+          # For flaw 3 / flaw 5 fix also:
+          # users.check_csrf()
           note = request.form["note"]
           notes.add_note(note)
       return redirect("welcome")
